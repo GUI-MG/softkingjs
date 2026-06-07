@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Coroa -->
+  <g fill="#F4A62A">
+    <path d="M120 120 L150 80 L200 120 L250 80 L280 120 L280 150 L120 150 Z"/>
+    <circle cx="150" cy="70" r="10"/>
+    <circle cx="200" cy="60" r="10"/>
+    <circle cx="250" cy="70" r="10"/>
+  </g>
+
+  <!-- Camiseta -->
+  <g fill="#1F8A4D">
+    <path d="M140 160 
+             L110 190 
+             L130 210 
+             L140 200 
+             L140 280 
+             Q200 310 260 280 
+             L260 200 
+             L270 210 
+             L290 190 
+             L260 160 
+             Z"/>
+  </g>
+
+  <!-- Texto -->
+  <text x="200" y="350" text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="48"
+        fill="white">
+    SoftKing
+  </text>
+
+  <!-- Registrado -->
+  <text x="300" y="320"
+        font-family="Arial, sans-serif"
+        font-size="16"
+        fill="white">
+    ®
+  </text>
+</svg>
