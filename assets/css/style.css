@@ -527,6 +527,8 @@ button.actions:hover {
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
+    height: 100%;
+    flex: 1;
 }
 
 #loginForm #loginContainer {
@@ -535,21 +537,159 @@ button.actions:hover {
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    margin: 80px;
+    margin: 10px;
     padding: 30px;
     box-shadow: 2px 3px 2px 4px rgba(0, 0, 0, 0.3);
     border-radius: 30px;
     width: 30%;
+    height: 70%;
+    transition: all 0.4s ease;
 }
 
-#loginForm #cadastrar-se .container {
+
+#loginForm  #loginContainer:hover {
+    transform: scale(1.01);
+}
+#loginForm form {
+    width: 85%;
+}
+
+#loginForm #cadastrar-se.container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    box-shadow: 1px 2px 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 35px;
+    gap: 15px;
+    width: 70%;
 }
 
-#loginForm input{
-    border-radius: 10px;
+#loginForm #user, #senha {
+    border-radius: 15px;
+    width: 100%;
+    height: 30px;
+    font-size: 20px;
+    padding: 5px;
+    transition: padding 0.4s ease;
+}
+
+#loginForm #user:focus, #senha:focus {
+    box-shadow: none;
+    outline: none;
+    padding-left: 8px;
+}
+
+#loginForm label {
+    font-size: 16px;
+}
+
+.submit {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#fazerLogin {
+    background-color: rgb(215, 0, 0);
+    color: white;
+    border-radius: 18px;
+    width: 80%;
+    height: 40px;
+    font-size: 18px;
+    transition: all 0.4s ease;
+}
+
+#fazerLogin:hover {
+    background-color: rgb(235, 0, 0);
+    transform: scale(1.1);
+    box-shadow: 2px 3px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+#cadastrar {
+    background-color: rgb(215, 0, 0);
+    color: white;
+    border-radius: 18px;
+    width: 50%;
+    height: 40px;
+    font-size: 15px;
+    transition: all 0.4s ease;
+}
+
+#cadastrar:hover {
+    background-color: rgb(235, 0, 0);
+    transform: scale(1.08);
+    box-shadow: 2px 3px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#cadastro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 3px 2px 4px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    border-radius: 12px;
+    margin: 50px;
+    flex: 1;
+}
+
+#cadastro .container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 30px;
+    padding-inline: 10px;
+    flex: 0.6;
+}
+
+#efetuarCadastro {
+    background-color: rgb(215, 0, 0);
+    color: white;
+    border-radius: 18px;
+    width: 80%;
+    height: 50px;
+    font-size: 20px;
+    transition: all 0.4s ease;
+}
+
+#efetuarCadastro:hover {
+    background-color: rgb(235, 0, 0);
+    transform: scale(1.08);
+    box-shadow: 2px 2px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+#cadastroUsuario #nome, #sobrenome, #email, #rua, #cidade, #numero, #cep, #senhaCadastro, #confirmarSenhaCadastro {
+    border-radius: 15px;
+    width: 100%;
+    height: 30px;
+    font-size: 20px;
+    padding: 5px;
+    padding-inline: 20px;
+    transition: padding 0.4s ease;
+}
+
+#cadastroUsuario #nome:focus, #sobrenome:focus, #email:focus, #rua:focus, #cidade:focus, #numero:focus, #cep:focus, #senhaCadastro:focus, #confirmarSenhaCadastro:focus {
+    box-shadow: none;
+    outline: none;
+    padding-left: 8px;
+}
+
+.submitCadastro {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
 }

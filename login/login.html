@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
-    
     <nav id="navbar">
         <div class="container">
             <div class="nav_image">
@@ -15,22 +14,28 @@
             </div>
         </div>
     </nav>
-
+    
     <section id="loginForm" class="container">
         <div id="loginContainer" class="container">
+            <h1>
+                BEM VINDO DE VOLTA!
+            </h1>
+
             <form action="login.php" method="post" autocomplete="off">
                 <p>
-                    <label for="user">Usuário: 
-                        <input type="text">
-                    </label>
+                    <label for="user"><strong>Usuário</strong></label>
                 </p>
                 <p>
-                    <label for="senha">Senha:
-                        <input type="password">
-                    </label>
+                    <input type="text" id="user">
                 </p>
                 <p>
-                    <input type="submit" value="Fazer login">
+                    <label for="senha"><strong>Senha</strong></label>
+                </p>
+                <p>
+                    <input type="password" id="senha">
+                </p>
+                <p class="submit">
+                    <input type="submit" value="Fazer login" id="fazerLogin">
                 </p>
             </form>
 
@@ -38,7 +43,7 @@
                 <p>
                     Não possui conta?
                 </p>
-                <button onclick="window.location.href='cadastro.html'">
+                <button onclick="window.location.href='../cadastro/cadastro.html'" id="cadastrar">
                     Cadastrar-se
                 </button>
             </div>
