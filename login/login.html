@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    
+    <nav id="navbar">
+        <div class="container">
+            <div class="nav_image">
+                <img src="../assets/img/logo/logo_Soft_King.png" alt="Logo SoftKing" id="logo">
+            </div>
+        </div>
+    </nav>
+
+    <section id="loginForm" class="container">
+        <div id="loginContainer" class="container">
+            <form action="login.php" method="post" autocomplete="off">
+                <p>
+                    <label for="user">Usuário: 
+                        <input type="text">
+                    </label>
+                </p>
+                <p>
+                    <label for="senha">Senha:
+                        <input type="password">
+                    </label>
+                </p>
+                <p>
+                    <input type="submit" value="Fazer login">
+                </p>
+            </form>
+
+            <div id="cadastrar-se" class="container">
+                <p>
+                    Não possui conta?
+                </p>
+                <button onclick="window.location.href='cadastro.html'">
+                    Cadastrar-se
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container" id="footer">
+            <small>&copySoftKing</small>
+        </div>
+    </footer>
+</body>
+</html>
