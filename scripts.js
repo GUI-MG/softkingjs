@@ -163,7 +163,7 @@ function selecionarTamanho(tamProduto) {
                 if(estoqueProduto > 0 && !tamanhoExistente) {
                     produto.tamanho = produtoTam;
                     produto.estoque[indexTamanho]-=produto.quantidade;                   
-                    console.log(produto);
+
                 } else {
                     Swal.fire ({
                         title: 'Erro!',
