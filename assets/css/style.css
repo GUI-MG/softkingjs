@@ -520,3 +520,36 @@ button.actions:hover {
     height: 15px;
     width: 50px;
 }
+
+#loginForm {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#loginForm #loginContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 80px;
+    padding: 30px;
+    box-shadow: 2px 3px 2px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 30px;
+    width: 30%;
+}
+
+#loginForm #cadastrar-se .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#loginForm input{
+    border-radius: 10px;
+}
