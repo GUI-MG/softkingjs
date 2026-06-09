@@ -329,7 +329,7 @@ function renderizarCarrinho() {
         <section class="produtoCarrinho">
             <article class="card_carrinho">
             <div class="card_description">
-               <img src="assets/img/${getImagePorNome(carrinho[f].nome)}" alt="${carrinho[f].nome}">
+               <img src="../assets/img/${getImagePorNome(carrinho[f].nome)}" alt="${carrinho[f].nome}">
                 <div class="description_body"> 
                     <p>${carrinho[f].descricao}</p>
                     <p>${carrinho[f].tamanho ? carrinho[f].tamanho : ''}</p>
