@@ -567,12 +567,14 @@ button.actions:hover {
 }
 
 #loginForm #user, #senha {
-    border-radius: 15px;
+    border-radius: 10px;
     width: 100%;
     height: 30px;
     font-size: 20px;
     padding: 5px;
     transition: padding 0.4s ease;
+    border: none;
+    background-color: rgb(240, 240, 240);
 }
 
 #loginForm #user:focus, #senha:focus {
@@ -583,6 +585,25 @@ button.actions:hover {
 
 #loginForm label {
     font-size: 16px;
+}
+
+#passwordPart {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: right;
+    align-items: right;
+}
+
+#showPassword {
+    width: 40px;
+    border: none;
+    border-radius: 5px;
+}
+
+#showPassword i{
+    object-fit: fill;
+    font-size: 20px;
 }
 
 .submit {
@@ -601,6 +622,7 @@ button.actions:hover {
     height: 40px;
     font-size: 18px;
     transition: all 0.4s ease;
+    border: none;
 }
 
 #fazerLogin:hover {
@@ -617,12 +639,14 @@ button.actions:hover {
     height: 40px;
     font-size: 15px;
     transition: all 0.4s ease;
+    border: none;
 }
 
 #cadastrar:hover {
     background-color: rgb(235, 0, 0);
     transform: scale(1.08);
     box-shadow: 2px 3px 1px 3px rgba(0, 0, 0, 0.3);
+    border: none;
 }
 
 main {
@@ -638,10 +662,9 @@ main {
     justify-content: center;
     align-items: center;
     box-shadow: 2px 3px 2px 4px rgba(0, 0, 0, 0.1);
-    width: 80%;
+    width: 50%;
     border-radius: 12px;
     margin: 50px;
-    flex: 1;
 }
 
 #cadastro .container {
@@ -651,17 +674,18 @@ main {
     justify-content: center;
     padding: 30px;
     padding-inline: 10px;
-    flex: 0.6;
+    width: 70%;
 }
 
 #efetuarCadastro {
     background-color: rgb(215, 0, 0);
     color: white;
     border-radius: 18px;
-    width: 80%;
+    width: 100%;
     height: 50px;
     font-size: 20px;
     transition: all 0.4s ease;
+    border: none;
 }
 
 #efetuarCadastro:hover {
@@ -672,7 +696,7 @@ main {
 
 #cadastroUsuario #nome, #sobrenome, #email, #rua, #cidade, #numero, #cep, #senhaCadastro, #confirmarSenhaCadastro {
     border-radius: 15px;
-    width: 100%;
+    width: 90%;
     height: 30px;
     font-size: 20px;
     padding: 5px;
@@ -686,10 +710,12 @@ main {
     padding-left: 8px;
 }
 
-.submitCadastro {
+#submitCadastro {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
+    width: 80%;
+    margin: 30px;
 }

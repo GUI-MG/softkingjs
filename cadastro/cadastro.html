@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
     <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- BootStrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css">
 </head>
 <body>
 
@@ -16,7 +18,7 @@
             <div class="nav_actions">
                 <ul>
                     <button class="navbar" onclick="window.location.href='../login/login.html'">
-                        Voltar
+                        <i class="bi bi-arrow-up-left"></i>  Voltar
                     </button>
                 </ul>
             </div>
@@ -27,7 +29,7 @@
         <section id="cadastro" class="container">
             <div class="container">
                 <p>
-                    <h1><strong>Cadastro de Usuário:</strong></h1>
+                    <h1><strong><i class="bi bi-pen-fill"></i>    Cadastro de Usuário:</strong></h1>
                 </p>
                 <form action="cadastro.php" method="post" autocomplete="off" id="cadastroUsuario">
                     <p>
@@ -102,7 +104,7 @@
                     <p>
                         <input type="password" id="confirmarSenhaCadastro">
                     </p>
-                    <p class="submitCadastro">
+                    <p id="submitCadastro">
                         <input type="submit" id="efetuarCadastro" value="Cadastrar-se">
                     </p>
                 </form>
