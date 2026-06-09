@@ -136,7 +136,7 @@ button.navbar:hover {
     gap: 50px;
 }
 
-button.actions {
+.actionsButton {
     text-align: center;
     border-radius: 25px;
     border: none;
@@ -150,7 +150,7 @@ button.actions {
     transition: all 0.5s ease;
 }
 
-button.actions:hover {
+.actionsButton:hover {
     border-radius: 15px;
     transform: scale(1.03);
     background-color: rgb(200, 30, 0);
@@ -564,6 +564,8 @@ button.actions:hover {
     border-radius: 35px;
     gap: 15px;
     width: 70%;
+    padding: 10px;
+    margin: 20px;
 }
 
 #loginForm #user, #senha {
@@ -627,7 +629,7 @@ button.actions:hover {
 
 #fazerLogin:hover {
     background-color: rgb(235, 0, 0);
-    transform: scale(1.1);
+    transform: scale(1.08);
     box-shadow: 2px 3px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
@@ -644,7 +646,7 @@ button.actions:hover {
 
 #cadastrar:hover {
     background-color: rgb(235, 0, 0);
-    transform: scale(1.08);
+    transform: scale(1.05);
     box-shadow: 2px 3px 1px 3px rgba(0, 0, 0, 0.3);
     border: none;
 }
@@ -702,12 +704,16 @@ main {
     padding: 5px;
     padding-inline: 20px;
     transition: padding 0.4s ease;
+    border: none;
+    background-color: rgb(240, 240, 240);
 }
 
 #cadastroUsuario #nome:focus, #sobrenome:focus, #email:focus, #rua:focus, #cidade:focus, #numero:focus, #cep:focus, #senhaCadastro:focus, #confirmarSenhaCadastro:focus {
     box-shadow: none;
     outline: none;
     padding-left: 8px;
+    border: none;
+    background-color: rgb(240, 240, 240);
 }
 
 #submitCadastro {

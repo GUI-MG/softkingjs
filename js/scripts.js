@@ -41,7 +41,7 @@ function renderizarProdutos() {
             
                 tamanhosHTML = `
                     <div id="segmentoTamanho">
-                        <input type="checkbox" id="tamanhoProduto" name="${produto.tamanhos[i]}" value="${produto.tamanhos[i]}" onclick="selecionarTamanho([${produto.id}, '${produto.tamanhos[i]}'])"> 
+                        <input type="checkbox" id="tamanhoProduto" name="${produto.tamanhos[i]}" value="${produto.tamanhos[i]}" onclick="selecionarTamanho([${produto.id}, '${produto.tamanhos[i]}'])">
                         <label for="tamanhoProduto">${produto.tamanhos[i]}</label>
                     </div>
                 `;
@@ -60,7 +60,7 @@ function renderizarProdutos() {
                         </header>
                     </div>
                         <div class="card_image">
-                            <img src="assets/img/${getImagePorNome(produto.nome)}" alt="${produto.nome}">
+                            <img src="../assets/img/${getImagePorNome(produto.nome)}" alt="${produto.nome}">
                         </div>
                         <div class="card_description">
                             <div class="card_description_header">
@@ -81,11 +81,11 @@ function renderizarProdutos() {
 
                         <div class="card_footer">
                             <div class="actions">
-                                <button class="actions" onclick="comprar(${produto.id})">
-                                    Comprar
+                                <button class="actionsButton" onclick="comprar(${produto.id})">
+                                    <i class="bi bi-bag-fill"></i>  Comprar
                                 </button>
-                                <button class="actions" onclick="adicionarAoCarrinho(${produto.id})">
-                                    Adicionar ao carrinho
+                                <button class="actionsButton" onclick="adicionarAoCarrinho(${produto.id})">
+                                    <i class="bi bi-cart"></i>  Adicionar ao carrinho
                                 </button>
                             </div>
                         </div>
