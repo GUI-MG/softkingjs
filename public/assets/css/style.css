@@ -696,7 +696,7 @@ main {
     box-shadow: 2px 2px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-#cadastroUsuario #nome, #sobrenome, #email, #rua, #cidade, #numero, #cep, #senhaCadastro, #confirmarSenhaCadastro {
+#cadastroUsuario #nome, #sobrenome, #email, #rua, #cidade, #numero, #cep, #usuarioCadastro, #senhaCadastro, #confirmarSenhaCadastro {
     border-radius: 15px;
     width: 90%;
     height: 30px;
@@ -708,7 +708,7 @@ main {
     background-color: rgb(240, 240, 240);
 }
 
-#cadastroUsuario #nome:focus, #sobrenome:focus, #email:focus, #rua:focus, #cidade:focus, #numero:focus, #cep:focus, #senhaCadastro:focus, #confirmarSenhaCadastro:focus {
+#cadastroUsuario #nome:focus, #sobrenome:focus, #email:focus, #rua:focus, #cidade:focus, #numero:focus, #cep:focus, #usuarioCadastro:focus, #senhaCadastro:focus, #confirmarSenhaCadastro:focus {
     box-shadow: none;
     outline: none;
     padding-left: 8px;
