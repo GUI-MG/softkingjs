@@ -136,11 +136,8 @@
 
             let senhaReal = document.getElementById('senhaCadastro').value;
             let senhaConfirmada = document.getElementById('confirmarSenhaCadastro').value;
-
-            let senhaRealSplit = senhaReal.split();
-            let senhaConfirmadaSplit = senhaConfirmada.split();
             
-            if(senhaConfirmadaSplit!=senhaRealSplit) {
+            if(senhaConfirmada!=senhaReal) {
                 Swal.fire({
                     title: 'Oops! Senha (s) incorreta (s).',
                     confirmButtonText: 'Ok',
