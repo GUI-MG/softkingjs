@@ -32,7 +32,7 @@
                 <p>
                     <h1><strong><i class="bi bi-pen-fill"></i>    Cadastro de Usuário:</strong></h1>
                 </p>
-                <form action="../../api/usuarios/cadastro/cadastro.php" method="post" autocomplete="off" id="cadastroUsuario">
+                <form action="../js/cadastroUsuario/cadastro.js" method="post" autocomplete="off" id="cadastroUsuario">
                     <p>
                         <label for="nome">
                             <strong>Nome:</strong>
@@ -48,6 +48,12 @@
                     </p>
                     <p>
                         <input type="text" id="sobrenome" required>
+                    </p>
+                    <p>
+                        <label for="telefone"><strong>Telefone:</strong></label>
+                    </p>
+                    <p>
+                        <input type="text" id="telefone">
                     </p>
                     <p>
                         <label for="email">
@@ -102,16 +108,22 @@
                             <strong>Senha:</strong>
                         </label>
                     </p>
-                    <p>
+                    <p id="passwordPart">
                         <input type="password" id="senhaCadastro" required>
+                        <button  type="button" id="showPasswordSenha">
+                            <i class="bi bi-eye" id="iconSenha"></i>
+                        </button>
                     </p>
                     <p>
                         <label for="confirmarSenhaCadastro">
                             <strong>Confirmar Senha:</strong>
                         </label>
                     </p>
-                    <p>
+                    <p id="passwordPart">
                         <input type="password" id="confirmarSenhaCadastro" required>
+                        <button  type="button" id="showPasswordConfirmarSenha">
+                            <i class="bi bi-eye" id="iconConfirmarSenha"></i>
+                        </button>
                     </p>
                     <p id="submitCadastro">
                         <input type="submit" id="efetuarCadastro" value="Cadastrar-se">
@@ -128,79 +140,37 @@
     </footer>
 
     <script>
+        const showPasswordSenha = document.getElementById('showPasswordSenha');
+        const showPasswordConfirmarSenha = document.getElementById('showPasswordConfirmarSenha');
+        const senha = document.getElementById('senhaCadastro');
+        const confirmarSenha = document.getElementById('confirmarSenhaCadastro')
+        const icon = document.getElementById('iconSenha');
+        const iconConfirmar = document.getElementById('iconConfirmarSenha');
 
-        const formulario = document.getElementById('cadastroUsuario');
-
-        formulario.addEventListener('submit', async function(evento) {
-            evento.preventDefault();
-
-            let senhaReal = document.getElementById('senhaCadastro').value;
-            let senhaConfirmada = document.getElementById('confirmarSenhaCadastro').value;
+        showPasswordSenha.addEventListener('click', () => {
+            if(senha.type == 'password') {
+                senha.type = 'text';
+                iconSenha.classList.replace('bi-eye', 'bi-eye-slash');
+            }else{
+                senha.type = 'password';
+                iconSenha.classList.replace('bi-eye-slash', 'bi-eye');
+            } 
             
-            if(senhaConfirmada!=senhaReal) {
-                Swal.fire({
-                    title: 'Oops! Senha (s) incorreta (s).',
-                    confirmButtonText: 'Ok',
-                    confirmButtonColor: 'rgb(0, 160, 0)', 
-                    icon: 'warning'
-                });
-                return;
+        })
+
+        showPasswordConfirmarSenha.addEventListener('click', () => {
+            if(confirmarSenha.type == 'password') {
+                confirmarSenha.type = 'text';
+                iconConfirmarSenha.classList.replace('bi-eye', 'bi-eye-slash');
+            }else {
+                confirmarSenha.type = 'password';
+                iconConfirmarSenha.classList.replace('bi-eye-slash', 'bi-eye');
             }
-
-            const dados = {
-                usuario: document.getElementById('usuarioCadastro').value,
-                senha: document.getElementById('senhaCadastro').value,
-                nome: document.getElementById('nome').value,
-                sobrenome: document.getElementById('sobrenome').value,
-                email: document.getElementById('email').value,
-                rua: document.getElementById('rua').value,
-                cidade: document.getElementById('cidade').value,
-                numero: document.getElementById('numero').value,
-                cep: document.getElementById('cep').value 
-            }
-
-            try {
-                const answer = await fetch('../../api/usuarios/cadastro/cadastro.php', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(dados)
-                });
-
-                const result = await answer.json();
-
-                if(answer.ok) {
-                    Swal.fire({
-                        title: 'Sucesso!',
-                        text: 'Usuário cadastrado.',
-                        confirmButtonText: 'Ok',
-                        confirmButtonColor: 'rgb(0, 160, 0)',
-                        icon: 'success'
-                    });
-                    formulario.reset();
-                }else {
-                    Swal.fire({
-                        title: 'Oops!',
-                        text: 'Ocorreu um erro',
-                        confirmButtonText: 'Ok',
-                        confirmButtonColor: 'rgb(0, 160, 0)',
-                        icon: 'warning'
-                    });
-                }
-            } catch (error) {
-                Swal.fire({
-                    title: 'Erro',
-                    text: 'Não foi possível conectar ao servidor...',
-                    confirmButtonText: 'Ok',
-                    confirmButtonColor: 'rgb(0, 160, 0)',
-                    icon: 'error'
-                })
-            }
-
-        });
-
+        })
     </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/cadastroUsuario/cadastro.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
