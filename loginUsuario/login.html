@@ -24,7 +24,7 @@
                 <i class="bi bi-person-fill"></i>    Login
             </h1>
 
-            <form action="../../api/usuarios/login/login.php" method="post" autocomplete="off" id="login">
+            <form autocomplete="off" id="login">
                 <p>
                     <label for="user"><strong>Usuário</strong></label>
                 </p>
@@ -41,7 +41,7 @@
                     </button>
                 </p>
                 <p class="submit">
-                    <input type="submit" value="Entrar" id="fazerLogin">
+                    <button id="fazerLogin" type="submit">Entrar</button>
                 </p>
             </form>
 
@@ -74,57 +74,6 @@
             }else {
                 senha.type = 'password';
                 iconSenha.classList.replace('bi-eye-slash', 'bi-eye');
-            }
-        })
-
-        const formulario = documet.getElementById('login');
-
-        formulario.addEventListener('submit', async function(evento) {
-            evento.preventDefault();
-
-            const dados = {
-                usuario: document.getElementById('user'),
-                senha: document.getElementById('senha')
-            };
-
-            try {
-                
-                const answer = await fetch('../../api/usuarios/login/login.php', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(dados)
-                });
-
-                const result = await answer.json();
-
-                if(result.ok) {
-                    Swal.fire({
-                        title: 'Sucesso!',
-                        text: 'Entrando...',
-                        showConfirmButton: false,
-                        icon: 'success'
-                    });
-                    window.location.href='../index.html'
-                }else {
-                    Swal.fire({
-                        title: 'Oops!',
-                        text: 'Usuário e/ou senha incorreto (s)...',
-                        confirmButtonColor: 'rgb(0, 160, 0)',
-                        confirmButtonText: 'Ok',
-                        icon: 'warning'
-                    });
-                }
-
-            } catch (error) {
-                Swal.fire({
-                    title: 'Oops!',
-                    text: 'Ocorreu um erro...',
-                    confirmButtonColor: 'rgb(0, 160, 0)',
-                    confirmButtonText: 'Ok',
-                    icon: 'error'
-                });
             }
         })
     </script>
