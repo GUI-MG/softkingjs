@@ -15,7 +15,8 @@ formularioLogin.addEventListener('submit', async(e) => {
         
         const {data, error} = await supabaseClient.auth.signInWithPassword({
             usuario: usuario,
-            senha: senha
+            senha: senha,
+            tipo: "comum"
         });
 
         if(error) {
