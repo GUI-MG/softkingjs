@@ -19,6 +19,8 @@ formularioLogin.addEventListener('submit', async(e) => {
             tipo: "comum"
         });
 
+        console.log(error);
+        
         if(error) {
             Swal.fire({
                 title: 'Oops...',
