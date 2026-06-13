@@ -106,5 +106,12 @@
         </div>
     </footer>
 
+    <script>
+        const {data: {user}} = await supabaseClient.auth.getUser();
+        if(!user) {
+            window.location.href='/loginUsuario/login.html';
+        }
+    </script>
+    <script src="/js/loginUsuario/login.js"></script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 const supabaseURL = "https://qwsiadauxdkklhbkvbns.supabase.co";
 const supabaseKey = "sb_publishable_ugUgXOsb0oM56NMQ7xNZLQ_Bbob3Xhm";
 
-const supabaseClient = supabaseClient.createClient(supabaseURL, supabaseKey);
+const supabaseClient = supabase.createClient(supabaseURL, supabaseKey);
 
 const formularioLogin = document.getElementById('login');
 
