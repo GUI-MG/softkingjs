@@ -33,7 +33,7 @@ formulario.addEventListener('submit', async(e) => {
     }
 
     const {data: authData, error: authError} = await supabaseClient.auth.signUp({
-        usuario: usuario,
+        email: email,
         senha: senha
     });
 

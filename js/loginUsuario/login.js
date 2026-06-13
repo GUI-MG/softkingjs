@@ -13,14 +13,18 @@ formularioLogin.addEventListener('submit', async(e) => {
     
     try {
         
+        const {perfil: {data}} = await supabaseClient 
+            .from('comum')
+            .select('email')
+            .eq('usuario', usuario)
+            
+
         const {data, error} = await supabaseClient.auth.signInWithPassword({
             usuario: usuario,
             senha: senha,
             tipo: "comum"
         });
 
-        console.log(error);
-        
         if(error) {
             Swal.fire({
                 title: 'Oops...',
