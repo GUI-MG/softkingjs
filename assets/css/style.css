@@ -689,9 +689,15 @@ main {
     justify-content: center;
     align-items: center;
     box-shadow: 2px 3px 2px 4px rgba(0, 0, 0, 0.1);
-    width: 50%;
-    border-radius: 12px;
+    width: 42%;
+    border-radius: 18px;
     margin: 50px;
+    transition: all 0.4s ease;
+}
+
+#cadastro:hover {
+    box-shadow: 3px 2px 3px 4px rgba(0, 0, 0, 0.25);
+    transform: scale(1.04);
 }
 
 #cadastro .container {
