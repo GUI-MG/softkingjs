@@ -5,7 +5,7 @@ const supabaseClient = supabase.createClient(supabaseURL, supabaseKey);
 
 const formularioLogin = document.getElementById('login');
 
-formularioLogin.addEventListener('submit', async function(e) {
+formularioLogin.addEventListener('submit', async(e) => {
     e.preventDefault();
 
     const usuario = document.getElementById('user').value;
