@@ -60,7 +60,7 @@ function renderizarProdutos() {
                         </header>
                     </div>
                         <div class="card_image">
-                            <img src="../assets/img/${getImagePorNome(produto.nome)}" alt="${produto.nome}">
+                            <img src="../../assets/img/${getImagePorNome(produto.nome)}" alt="${produto.nome}">
                         </div>
                         <div class="card_description">
                             <div class="card_description_header">
@@ -316,20 +316,15 @@ function renderizarCarrinho() {
                 <button onclick="window.location.href='produtos.html'" id="produtos"><strong>Clique aqui!</strong></button> 
             </div>
         `
-    }
-    
-    /* ${carrinho[f].tamanhos ? `<p><b>Tamanhos:</b> ${carrinho[f].tamanhos.join(', ')}</p>`: '' } */
-    
+    }    
 
     for(let f = 0; f < carrinho.length; f++) {
-        
-//        <span><h2><b>R$ ${}</b></h2></span>
         
         produtoHTML = `
         <section class="produtoCarrinho">
             <article class="card_carrinho">
             <div class="card_description">
-               <img src="../assets/img/${getImagePorNome(carrinho[f].nome)}" alt="${carrinho[f].nome}">
+               <img src="../../assets/img/${getImagePorNome(carrinho[f].nome)}" alt="${carrinho[f].nome}">
                 <div class="description_body"> 
                     <p>${carrinho[f].descricao}</p>
                     <p>${carrinho[f].tamanho ? carrinho[f].tamanho : ''}</p>
